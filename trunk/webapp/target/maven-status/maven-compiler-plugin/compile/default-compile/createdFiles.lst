@@ -1,0 +1,4 @@
+com\ers\internship\server\PropertyManager.class
+com\ers\internship\jetty\server\JettyServer.class
+com\ers\internship\jetty\server\RestApplication.class
+com\ers\internship\server\WebApplication.class

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="RestServer">
+  <ClassDiagramComponents>
+    <Class name="RestServer" package="com.ers.internship.rest.server" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="sfb" type="JAXRSServerFactoryBean" visibility="private"/>
+        <Field name="url" type="String" visibility="private"/>
+        <Field name="server" type="Server" visibility="private"/>
+        <Field name="application" type="RestApplication" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="url"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="start" returnType="void" visibility="public"/>
+        <Method name="stop" returnType="void" visibility="public"/>
+        <Method name="getUrl" returnType="String" visibility="public"/>
+        <Method name="registerService" returnType="void" visibility="public">
+          <Argument type="Object" name="service"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

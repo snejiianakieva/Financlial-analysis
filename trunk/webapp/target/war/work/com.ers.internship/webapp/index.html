@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head
+		>
+        <title></title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<link href="lib/jqw/styles/jqx.base.css" rel="stylesheet" type="text/css" />
+		<link href="lib/jqw/styles/jqx.darkblue.css" rel="stylesheet" type="text/css" />
+		<link href="lib/jqw/styles/body.css" rel="stylesheet" type="text/css" />
+        <script src="require-2.1.15.js"></script>
+
+        <style> 
+            #statusDiv{
+                width:'100%'; 
+                height:'90%';
+            }
+            #errorDiv{
+                display:none;
+                width:'100%'; 
+                height:'90%';
+            }
+
+        </style>
+
+		<script type="text/javascript">
+
+			var ROOT_RELATIVE_PATH = ".";
+			requirejs.config({
+				"baseUrl": ROOT_RELATIVE_PATH
+			});
+
+		</script>
+		<script type="text/javascript" src="./lib/requirejs/config.js" ></script>
+
+    </head>
+
+    <body >
+		<div id='content'>
+			<div id='jqxWidget' style='height: 300px;'>
+				<div id='jqxMenu' style='visibility: hidden; margin-left: 5px;'>
+					<ul>
+						<li><a href="#Home">Home</a></li>
+						<li>Portfolio
+							<ul>
+								<li><a href="createPortfolio.html" title="Create portfolio">Create portfolio</a></li>
+								<li><a href="createPosition.html" title="Create position">Create position</a></li>
+								<li><a href="#AllProducts">Create transaction</a></li>
+							</ul>
+						</li>
+						<li>Instrument
+							<ul style='width: 200px;'>
+								<li><a href="#SupportHome">Credit instrument</a></li>
+								<li><a href="#CustomerService">Time deposit instrument</a></li>
+							</ul>
+						</li>
+						<li>Market
+							<ul style='width: 200px;'>
+								<li><a href="#Designers">Yield curve</a></li>
+								<li><a href="#Developers">Instrument price</a></li>
+							</ul>
+						</li>
+						<li>Calculate
+							<ul style='width: 250px;'>
+								<li><a href="#Education">Portfolio calculation</a></li>
+								<li><a href="calcCashFlow.html" title="Cashflow">Position calculation</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="eventWindow" style="visibility: hidden; ">
+			
+		</div>
+		<script type="text/javascript">
+			require(["jquery", "js/Menu"], function ($, menu) {
+				$(document).ready(function () {
+					var menubar = $("#jqxMenu");
+					menu(menubar);
+				});
+			});
+			</script>
+    </body>
+
+</html>

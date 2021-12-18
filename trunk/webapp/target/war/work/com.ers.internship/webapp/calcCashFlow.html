@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+	<head>
+		<title></title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<link href="lib/jqw/styles/jqx.base.css" rel="stylesheet" type="text/css" />
+		<link href="lib/jqw/styles/jqx.darkblue.css" rel="stylesheet" type="text/css" />
+		<link href="lib/jqw/styles/body.css" rel="stylesheet" type="text/css" />
+        <script src="require-2.1.15.js"></script>
+
+        <style> 
+            #statusDiv{
+                width:'100%'; 
+                height:'90%';
+            }
+            #errorDiv{
+                display:none;
+                width:'100%'; 
+                height:'90%';
+            }
+
+        </style>
+
+		<script type="text/javascript">
+
+			var ROOT_RELATIVE_PATH = ".";
+			requirejs.config({
+				"baseUrl": ROOT_RELATIVE_PATH
+			});
+
+		</script>
+		<script type="text/javascript" src="./lib/requirejs/config.js" ></script>
+
+	</head>
+	<body class='default'>
+		<fieldset>
+			<table>
+				<tr>
+					<td>
+						<div id='selector'></div>
+					</td>
+					<td>
+						<div>
+							<input type="button" value="Create new position" id='createButton'  style = "visibility: hidden"/>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+		<fieldset id="editor" style="visibility: hidden">
+			<table>
+				<tr>
+					<td>
+						<div id="cashflowtable"></div>
+					</td>
+					<td>
+						<div id="cashflowchart"  style="width:450px; height:400px"></div>
+					</td>
+					<td>
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+		<script type="text/javascript">
+			require(["jquery", "jqw/jqx-all", "js/cashflowEditor"], function ($, jqw, selector) {
+				selector.createSelector('position');
+				$("#createButton").css('visibility', 'hidden');
+			});
+        </script>
+	</body>
+</html>

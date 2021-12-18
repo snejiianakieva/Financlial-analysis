@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="PositionSnapshotCalculatorImpl" package="com.ers.internship.calculation.portfolioitem" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="logger" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calculatePresentValue" returnType="void" visibility="public">
+          <Argument type="PortfolioItem" name="portfolioItem"/>
+          <Argument type="Market" name="market"/>
+          <Argument type="Calendar" name="evaluationDate"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PortfolioSnapshotCalculatorImpl" package="com.ers.internship.calculation.portfolioitem" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="logger" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calculatePresentValue" returnType="void" visibility="public">
+          <Argument type="PortfolioItem" name="portfolioItem"/>
+          <Argument type="Market" name="market"/>
+          <Argument type="Calendar" name="evaluationDate"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="PortfolioItemCalculator" package="com.ers.internship.calculation.portfolioitem" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Methods>
+        <Method name="calculatePresentValue" returnType="void" visibility="public">
+          <Argument type="PortfolioItem" name="portfolioItem"/>
+          <Argument type="Market" name="market"/>
+          <Argument type="Calendar" name="evaluationDate"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="Calculator" package="com.ers.internship.calculation" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Methods>
+        <Method name="calculate" returnType="void" visibility="public">
+          <Argument type="PortfolioItem" name="portfolioItem"/>
+          <Argument type="Market" name="market"/>
+          <Argument type="Calendar" name="evaluationDate"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Class name="AssetCalculatorImpl" package="com.ers.internship.calculation.instrument" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="logger" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calculatePresentValue" returnType="double" visibility="public">
+          <Argument type="Instrument" name="instrument"/>
+          <Argument type="double" name="volume"/>
+          <Argument type="Market" name="market"/>
+          <Argument type="Calendar" name="evaluationDate"/>
+        </Method>
+        <Method name="buildCashFlow" returnType="Map&lt;Calendar, Double&gt;" visibility="public">
+          <Argument type="Instrument" name="instrument"/>
+          <Argument type="double" name="volume"/>
+        </Method>
+        <Method name="getInterestCashFLow" returnType="Map&lt;Calendar, Double&gt;" visibility="public"/>
+        <Method name="getPrincipalCashFLow" returnType="Map&lt;Calendar, Double&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CreditRegularCalculatorImpl" package="com.ers.internship.calculation.instrument" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields>
+        <Field name="logger" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="principalCashFlow" type="Map&lt;Calendar, Double&gt;" visibility="private" isFinal="true"/>
+        <Field name="interestCashFlow" type="Map&lt;Calendar, Double&gt;" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calculatePresentValue" returnType="double" visibility="public">
+          <Argument type="Instrument" name="instrument"/>
+          <Argument type="double" name="volume"/>
+          <Argument type="Market" name="market"/>
+          <Argument type="Calendar" name="evaluationDate"/>
+        </Method>
+        <Method name="calculateInitialPaymentDate" returnType="Calendar" visibility="private">
+          <Argument type="Calendar" name="issue"/>
+          <Argument type="Calendar" name="maturity"/>
+          <Argument type="int" name="stepType"/>
+          <Argument type="int" name="stepValue"/>
+        </Method>
+        <Method name="buildCashFlow" returnType="Map&lt;Calendar, Double&gt;" visibility="public">
+          <Argument type="Instrument" name="instrument"/>
+          <Argument type="double" name="volume"/>
+        </Method>
+        <Method name="getPrincipalCashFLow" returnType="Map&lt;Calendar, Double&gt;" visibility="public"/>
+        <Method name="getInterestCashFLow" returnType="Map&lt;Calendar, Double&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="InstrumentCalculator" package="com.ers.internship.calculation.instrument" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Methods>
+        <Method name="calculatePresentValue" returnType="double" visibility="public">
+          <Argument type="Instrument" name="instrument"/>
+          <Argument type="double" name="volume"/>
+          <Argument type="Market" name="market"/>
+          <Argument type="Calendar" name="evaluationDate"/>
+        </Method>
+        <Method name="buildCashFlow" returnType="Map&lt;Calendar, Double&gt;" visibility="public">
+          <Argument type="Instrument" name="instrument"/>
+          <Argument type="double" name="volume"/>
+        </Method>
+        <Method name="getInterestCashFLow" returnType="Map&lt;Calendar, Double&gt;" visibility="public"/>
+        <Method name="getPrincipalCashFLow" returnType="Map&lt;Calendar, Double&gt;" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Class name="TimeDepositCalculatorImpl" package="com.ers.internship.calculation.instrument" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields>
+        <Field name="logger" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="principalCashFlow" type="Map&lt;Calendar, Double&gt;" visibility="private" isFinal="true"/>
+        <Field name="interestCashFlow" type="Map&lt;Calendar, Double&gt;" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calculatePresentValue" returnType="double" visibility="public">
+          <Argument type="Instrument" name="instrument"/>
+          <Argument type="double" name="volume"/>
+          <Argument type="Market" name="market"/>
+          <Argument type="Calendar" name="evaluationDate"/>
+        </Method>
+        <Method name="buildCashFlow" returnType="Map&lt;Calendar, Double&gt;" visibility="public">
+          <Argument type="Instrument" name="instrument"/>
+          <Argument type="double" name="volume"/>
+        </Method>
+        <Method name="getInterestCashFLow" returnType="Map&lt;Calendar, Double&gt;" visibility="public"/>
+        <Method name="getPrincipalCashFLow" returnType="Map&lt;Calendar, Double&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.ers.internship.calculation.portfolioitem.PositionSnapshotCalculatorImpl" target="com.ers.internship.calculation.portfolioitem.PortfolioItemCalculator"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.ers.internship.calculation.portfolioitem.PortfolioSnapshotCalculatorImpl" target="com.ers.internship.calculation.portfolioitem.PortfolioItemCalculator"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.ers.internship.calculation.instrument.CreditRegularCalculatorImpl" target="com.ers.internship.calculation.instrument.InstrumentCalculator"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.ers.internship.calculation.instrument.AssetCalculatorImpl" target="com.ers.internship.calculation.instrument.InstrumentCalculator"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.ers.internship.calculation.instrument.TimeDepositCalculatorImpl" target="com.ers.internship.calculation.instrument.InstrumentCalculator"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

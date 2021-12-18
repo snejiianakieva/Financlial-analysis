@@ -1,0 +1,8 @@
+#surefire
+#Sun May 28 09:31:32 EEST 2017
+maven.ext.class.path=D\:\\work\\NetBeans 8.0.2\\java\\maven-nblib\\netbeans-eventspy.jar;D\:\\work\\NetBeans 8.0.2\\java\\maven-nblib\\netbeans-eventspy.jar;D\:\\work\\NetBeans 8.0.2\\java\\maven-nblib\\netbeans-cos.jar;D\:\\work\\NetBeans 8.0.2\\java\\maven-nblib\\netbeans-cos.jar
+user.dir=D\:\\ERS\\snejina\\trunk\\server
+file.encoding=UTF-8
+localRepository=C\:\\Users\\syanakieva\\.m2\\repository
+basedir=D\:\\ERS\\snejina\\trunk\\server
+test=com.ers.internship.server.integrationTest.IntegrationYieldCurveTest

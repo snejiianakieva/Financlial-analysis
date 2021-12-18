@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Interface name="PortfolioRestService" package="com.ers.internship.rest.portfolio" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Methods>
+        <Method name="getAll" returnType="Response" visibility="public"/>
+        <Method name="searchByName" returnType="Response" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="loadById" returnType="Response" visibility="public">
+          <Argument type="String" name="id"/>
+          <Argument type="long" name="time"/>
+        </Method>
+        <Method name="create" returnType="Response" visibility="public">
+          <Argument type="Portfolio" name="p"/>
+        </Method>
+        <Method name="update" returnType="Response" visibility="public">
+          <Argument type="Portfolio" name="p"/>
+        </Method>
+        <Method name="deleteById" returnType="Response" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Class name="PortfolioRestServiceImpl" package="com.ers.internship.rest.portfolio" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="portfolioService" type="PortfolioService" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="PersistentStore" name="persistentStore"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getAll" returnType="Response" visibility="public"/>
+        <Method name="loadById" returnType="Response" visibility="public">
+          <Argument type="String" name="id"/>
+          <Argument type="long" name="time"/>
+        </Method>
+        <Method name="create" returnType="Response" visibility="public">
+          <Argument type="Portfolio" name="p"/>
+        </Method>
+        <Method name="update" returnType="Response" visibility="public">
+          <Argument type="Portfolio" name="p"/>
+        </Method>
+        <Method name="deleteById" returnType="Response" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="searchByName" returnType="Response" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.ers.internship.rest.portfolio.PortfolioRestServiceImpl" target="com.ers.internship.rest.portfolio.PortfolioRestService"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

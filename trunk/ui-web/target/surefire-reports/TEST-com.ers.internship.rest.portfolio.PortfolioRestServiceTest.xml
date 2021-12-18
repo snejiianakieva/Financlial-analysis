@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="5" failures="1" name="com.ers.internship.rest.portfolio.PortfolioRestServiceTest" time="0.297" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_151\jre\bin"/>
+    <property name="java.vm.version" value="25.151-b12"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="BG"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="F:\ERS\snejina\trunk"/>
+    <property name="java.runtime.version" value="1.8.0_151-b12"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_151\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\Lenovo\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar"/>
+    <property name="classworlds.conf" value="C:\Program Files\NetBeans 8.2\java\maven\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1251"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_151\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files (x86)\Windows Kits\8.0\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\;C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\Lenovo"/>
+    <property name="user.timezone" value="Europe/Helsinki"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="Lenovo"/>
+    <property name="java.class.path" value="C:\Program Files\NetBeans 8.2\java\maven\boot\plexus-classworlds-2.4.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_151\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 clean install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="bg"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_151"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_151\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_151\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_151\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_151\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_151\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_151\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_151\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_151\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_151\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Program Files\NetBeans 8.2\java\maven"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="com.ers.internship.rest.portfolio.PortfolioRestServiceTest" name="loadAllTest" time="0.028">
+    <failure message="Service returned status code 404 when trying to get all entities! expected:&lt;200&gt; but was:&lt;404&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Service returned status code 404 when trying to get all entities! expected:&lt;200&gt; but was:&lt;404&gt;
+	at junit.framework.Assert.fail(Assert.java:50)
+	at junit.framework.Assert.failNotEquals(Assert.java:287)
+	at junit.framework.Assert.assertEquals(Assert.java:67)
+	at junit.framework.Assert.assertEquals(Assert.java:199)
+	at com.ers.internship.rest.AbstractSearchingRestServiceTest.loadAllTest(AbstractSearchingRestServiceTest.java:42)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:45)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:42)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:30)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:47)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+</failure>
+    <system-out>08:42:41.326 [main] INFO  o.a.cxf.jaxrs.utils.ResourceUtils - Ignoring per-request resource class com.ers.internship.rest.fxquote.FxQuoteRestServiceImpl as it is also registered as singleton
+08:42:41.326 [main] INFO  o.a.cxf.jaxrs.utils.ResourceUtils - Ignoring per-request resource class com.ers.internship.rest.calculation.CalculationRestServiceImpl as it is also registered as singleton
+08:42:41.326 [main] INFO  o.a.cxf.jaxrs.utils.ResourceUtils - Ignoring per-request resource class com.ers.internship.rest.instrument.InstrumentRestServiceImpl as it is also registered as singleton
+08:42:41.326 [main] INFO  o.a.cxf.jaxrs.utils.ResourceUtils - Ignoring per-request resource class com.ers.internship.rest.instrumentpricequote.InstrumentPriceQuoteRestServiceImpl as it is also registered as singleton
+08:42:41.326 [main] INFO  o.a.cxf.jaxrs.utils.ResourceUtils - Ignoring per-request resource class com.ers.internship.rest.portfolio.PortfolioRestServiceImpl as it is also registered as singleton
+08:42:41.327 [main] INFO  o.a.cxf.jaxrs.utils.ResourceUtils - Ignoring per-request resource class org.codehaus.jackson.jaxrs.JacksonJsonProvider as it is also registered as singleton
+08:42:41.346 [main] DEBUG org.apache.cxf.endpoint.ServerImpl - unregister the server to serverRegistry 
+08:42:41.346 [main] INFO  org.apache.cxf.endpoint.ServerImpl - Setting the server&apos;s publish address to be http://localhost:9015
+08:42:41.348 [main] DEBUG o.a.c.jaxrs.provider.ProviderFactory - Problem with creating the default provider org.apache.cxf.jaxrs.provider.json.JSONProvider: org.apache.cxf.jaxrs.provider.json.JSONProvider
+08:42:41.351 [main] DEBUG org.apache.cxf.endpoint.ServerImpl - Server is starting.
+08:42:41.351 [main] DEBUG o.a.c.t.h.JettyHTTPDestination - registering incoming observer: org.apache.cxf.transport.ChainInitiationObserver@2d6c53fc
+08:42:41.351 [main] DEBUG o.a.c.t.h.JettyHTTPDestination - Activating receipt of incoming messages
+08:42:41.351 [main] DEBUG o.e.jetty.util.component.Container - Container o.e.j.s.h.ContextHandler{,null} + org.apache.cxf.transport.http_jetty.JettyHTTPHandler@25f4878b as handler
+08:42:41.351 [main] DEBUG o.e.jetty.util.component.Container - Container org.eclipse.jetty.server.handler.ContextHandlerCollection@2898ac89 + o.e.j.s.h.ContextHandler{,null} as handler
+08:42:41.352 [main] DEBUG o.e.j.u.component.AbstractLifeCycle - starting o.e.j.s.h.ContextHandler{,null}
+08:42:41.352 [main] DEBUG o.e.j.u.component.AbstractLifeCycle - starting org.apache.cxf.transport.http_jetty.JettyHTTPHandler@25f4878b
+08:42:41.352 [main] DEBUG o.e.j.server.handler.AbstractHandler - starting org.apache.cxf.transport.http_jetty.JettyHTTPHandler@25f4878b
+08:42:41.352 [main] DEBUG o.e.j.u.component.AbstractLifeCycle - STARTED org.apache.cxf.transport.http_jetty.JettyHTTPHandler@25f4878b
+08:42:41.352 [main] DEBUG o.e.j.server.handler.AbstractHandler - starting o.e.j.s.h.ContextHandler{,null}
+08:42:41.352 [main] DEBUG o.e.j.u.component.AbstractLifeCycle - STARTED o.e.j.s.h.ContextHandler{,null}
+08:42:41.352 [main] DEBUG org.apache.cxf.endpoint.ServerImpl - register the server to serverRegistry 
+08:42:41.353 [main] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Adding interceptor org.apache.cxf.interceptor.MessageSenderInterceptor@13e344d to phase prepare-send
+08:42:41.353 [main] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Adding interceptor org.apache.cxf.interceptor.MessageSenderInterceptor@13e344d to phase prepare-send
+08:42:41.353 [main] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Adding interceptor org.apache.cxf.jaxrs.client.spec.ClientRequestFilterInterceptor@4e423aa2 to phase pre-logical
+08:42:41.354 [main] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Chain org.apache.cxf.phase.PhaseInterceptorChain@7fbdb894 was created. Current flow:
+  pre-logical [ClientRequestFilterInterceptor]
+  prepare-send [MessageSenderInterceptor]
+
+08:42:41.355 [main] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Invoking handleMessage on interceptor org.apache.cxf.jaxrs.client.spec.ClientRequestFilterInterceptor@4e423aa2
+08:42:41.355 [main] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Invoking handleMessage on interceptor org.apache.cxf.interceptor.MessageSenderInterceptor@13e344d
+08:42:41.355 [main] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Adding interceptor org.apache.cxf.interceptor.MessageSenderInterceptor$MessageSenderEndingInterceptor@1c5920df to phase prepare-send-ending
+08:42:41.355 [main] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Chain org.apache.cxf.phase.PhaseInterceptorChain@7fbdb894 was modified. Current flow:
+  pre-logical [ClientRequestFilterInterceptor]
+  prepare-send [MessageSenderInterceptor]
+  prepare-send-ending [MessageSenderEndingInterceptor]
+
+08:42:41.355 [main] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Invoking handleMessage on interceptor org.apache.cxf.interceptor.MessageSenderInterceptor$MessageSenderEndingInterceptor@1c5920df
+08:42:41.355 [main] DEBUG o.apache.cxf.transport.http.Headers - Accept: application/json
+08:42:41.355 [main] DEBUG o.apache.cxf.transport.http.Headers - Content-Type: application/json
+08:42:41.356 [main] DEBUG o.a.cxf.transport.http.HTTPConduit - No Trust Decider for Conduit &apos;{http://localhost:9015}WebClient.http-conduit&apos;. An afirmative Trust Decision is assumed.
+08:42:41.357 [qtp195381554-20] DEBUG org.eclipse.jetty.http.HttpParser - filled 212/212
+08:42:41.358 [qtp195381554-20 - /portfolio/loadAll] DEBUG org.eclipse.jetty.server.Server - REQUEST /portfolio/loadAll on AsyncHttpConnection@1bf2372e,g=HttpGenerator{s=0,h=-1,b=-1,c=-1},p=HttpParser{s=-5,l=10,c=0},r=2
+08:42:41.358 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.e.j.server.handler.ContextHandler - scope null||/portfolio/loadAll @ o.e.j.s.h.ContextHandler{,null}
+08:42:41.358 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.e.j.server.handler.ContextHandler - context=||/portfolio/loadAll @ o.e.j.s.h.ContextHandler{,null}
+08:42:41.358 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.c.t.h.JettyHTTPDestination - Service http request on thread: Thread[qtp195381554-20 - /portfolio/loadAll,5,main]
+08:42:41.359 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.apache.cxf.transport.http.Headers - Request Headers: {Accept=[application/json], Cache-Control=[no-cache], connection=[keep-alive], content-type=[application/json], Host=[localhost:9015], Pragma=[no-cache], User-Agent=[Apache CXF 2.7.8]}
+08:42:41.359 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Adding interceptor org.apache.cxf.interceptor.ServiceInvokerInterceptor@499c6a6d to phase invoke
+08:42:41.359 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Adding interceptor org.apache.cxf.interceptor.OutgoingChainInterceptor@5e6a55fc to phase post-invoke
+08:42:41.359 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Adding interceptor org.apache.cxf.interceptor.OneWayProcessorInterceptor@223967c7 to phase pre-logical
+08:42:41.360 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Adding interceptor org.apache.cxf.interceptor.LoggingInInterceptor@35d0d475 to phase receive
+08:42:41.360 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Adding interceptor org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor@1f351fa0 to phase unmarshal
+08:42:41.360 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Adding interceptor org.apache.cxf.transport.https.CertConstraintsInterceptor@eb0e23e to phase pre-stream
+08:42:41.360 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Chain org.apache.cxf.phase.PhaseInterceptorChain@137c6c0f was created. Current flow:
+  receive [LoggingInInterceptor]
+  pre-stream [CertConstraintsInterceptor]
+  unmarshal [JAXRSInInterceptor]
+  pre-logical [OneWayProcessorInterceptor]
+  invoke [ServiceInvokerInterceptor]
+  post-invoke [OutgoingChainInterceptor]
+
+08:42:41.360 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Invoking handleMessage on interceptor org.apache.cxf.interceptor.LoggingInInterceptor@35d0d475
+08:42:41.361 [qtp195381554-20 - /portfolio/loadAll] DEBUG org.eclipse.jetty.http.HttpParser - filled 0/0
+08:42:41.361 [qtp195381554-20 - /portfolio/loadAll] INFO  o.a.c.i.LoggingInInterceptor - Inbound Message
+----------------------------
+ID: 30
+Address: http://localhost:9015/portfolio/loadAll
+Http-Method: GET
+Content-Type: application/json
+Headers: {Accept=[application/json], Cache-Control=[no-cache], connection=[keep-alive], content-type=[application/json], Host=[localhost:9015], Pragma=[no-cache], User-Agent=[Apache CXF 2.7.8]}
+--------------------------------------
+08:42:41.361 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Invoking handleMessage on interceptor org.apache.cxf.transport.https.CertConstraintsInterceptor@eb0e23e
+08:42:41.362 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Invoking handleMessage on interceptor org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor@1f351fa0
+08:42:41.362 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.apache.cxf.jaxrs.utils.JAXRSUtils - Trying to select a resource class, request path : /portfolio/loadAll
+08:42:41.362 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.apache.cxf.jaxrs.utils.JAXRSUtils - No resource class match for com.ers.internship.rest.calculation.CalculationRestServiceImpl, request path : /portfolio/loadAll
+08:42:41.362 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.apache.cxf.jaxrs.utils.JAXRSUtils - No resource class match for com.ers.internship.rest.fxquote.FxQuoteRestServiceImpl, request path : /portfolio/loadAll
+08:42:41.363 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.apache.cxf.jaxrs.utils.JAXRSUtils - No resource class match for com.ers.internship.rest.instrumentpricequote.InstrumentPriceQuoteRestServiceImpl, request path : /portfolio/loadAll
+08:42:41.363 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.apache.cxf.jaxrs.utils.JAXRSUtils - No resource class match for com.ers.internship.rest.instrument.InstrumentRestServiceImpl, request path : /portfolio/loadAll
+08:42:41.363 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.apache.cxf.jaxrs.utils.JAXRSUtils - Resource class com.ers.internship.rest.portfolio.PortfolioRestServiceImpl may get selected, request path : com.ers.internship.rest.portfolio.PortfolioRestServiceImpl, resource class @Path : /portfolio/loadAll
+08:42:41.363 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.apache.cxf.jaxrs.utils.JAXRSUtils - Resource class com.ers.internship.rest.portfolio.PortfolioRestServiceImpl has been selected, request path : com.ers.internship.rest.portfolio.PortfolioRestServiceImpl, resource class @Path : /portfolio/loadAll
+08:42:41.363 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.apache.cxf.jaxrs.utils.JAXRSUtils - Trying to select a resource operation on the resource class com.ers.internship.rest.portfolio.PortfolioRestServiceImpl
+08:42:41.364 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.apache.cxf.jaxrs.utils.JAXRSUtils - No method match, method name : update, request path : /loadAll, method @Path : /update, HTTP Method : GET, method HTTP Method : POST, ContentType : */*, method @Consumes : application/json,text/json,, Accept : application/json,, method @Produces : application/json,text/json,.
+08:42:41.364 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.apache.cxf.jaxrs.utils.JAXRSUtils - No method match, method name : create, request path : /loadAll, method @Path : /create, HTTP Method : GET, method HTTP Method : POST, ContentType : */*, method @Consumes : application/json,text/json,, Accept : application/json,, method @Produces : application/json,text/json,.
+08:42:41.364 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.apache.cxf.jaxrs.utils.JAXRSUtils - No method match, method name : loadById, request path : /loadAll, method @Path : /loadById/{id}/{date}, HTTP Method : GET, method HTTP Method : GET, ContentType : */*, method @Consumes : application/json,text/json,, Accept : application/json,, method @Produces : application/json,text/json,.
+08:42:41.365 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.apache.cxf.jaxrs.utils.JAXRSUtils - No method match, method name : searchByName, request path : /loadAll, method @Path : /searchByName/{name}, HTTP Method : GET, method HTTP Method : GET, ContentType : */*, method @Consumes : application/json,text/json,, Accept : application/json,, method @Produces : application/json,text/json,.
+08:42:41.365 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.apache.cxf.jaxrs.utils.JAXRSUtils - Resource operation getAll may get selected
+08:42:41.365 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.apache.cxf.jaxrs.utils.JAXRSUtils - No method match, method name : loadPositions, request path : /loadAll, method @Path : /loadPositions/{id}, HTTP Method : GET, method HTTP Method : GET, ContentType : */*, method @Consumes : application/json,text/json,, Accept : application/json,, method @Produces : application/json,text/json,.
+08:42:41.365 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.apache.cxf.jaxrs.utils.JAXRSUtils - No method match, method name : deleteById, request path : /loadAll, method @Path : /delete/{id}, HTTP Method : GET, method HTTP Method : DELETE, ContentType : */*, method @Consumes : application/json,text/json,, Accept : application/json,, method @Produces : application/json,text/json,.
+08:42:41.366 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.apache.cxf.jaxrs.utils.JAXRSUtils - Resource operation getAll on the resource class com.ers.internship.rest.portfolio.PortfolioRestServiceImpl has been selected
+08:42:41.366 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.c.j.i.JAXRSInInterceptor - Request path is: /portfolio/loadAll
+08:42:41.366 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.c.j.i.JAXRSInInterceptor - Request HTTP method is: GET
+08:42:41.366 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.c.j.i.JAXRSInInterceptor - Request contentType is: application/json
+08:42:41.366 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.c.j.i.JAXRSInInterceptor - Accept contentType is: application/json
+08:42:41.367 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.c.j.i.JAXRSInInterceptor - Found operation: getAll
+08:42:41.367 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Invoking handleMessage on interceptor org.apache.cxf.interceptor.OneWayProcessorInterceptor@223967c7
+08:42:41.367 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Invoking handleMessage on interceptor org.apache.cxf.interceptor.ServiceInvokerInterceptor@499c6a6d
+08:42:41.367 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.c.s.invoker.AbstractInvoker - Invoking method public javax.ws.rs.core.Response com.ers.internship.rest.portfolio.PortfolioRestServiceImpl.getAll() on object com.ers.internship.rest.portfolio.PortfolioRestServiceImpl@409c54f with params [].
+08:42:41.368 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Invoking handleMessage on interceptor org.apache.cxf.interceptor.OutgoingChainInterceptor@5e6a55fc
+08:42:41.368 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.c.i.OutgoingChainInterceptor - Interceptors contributed by bus: []
+08:42:41.368 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.c.i.OutgoingChainInterceptor - Interceptors contributed by service: []
+08:42:41.368 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.c.i.OutgoingChainInterceptor - Interceptors contributed by endpoint: [org.apache.cxf.interceptor.MessageSenderInterceptor@7a1226f8, org.apache.cxf.interceptor.LoggingOutInterceptor@49d236b3]
+08:42:41.368 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.c.i.OutgoingChainInterceptor - Interceptors contributed by binding: [org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor@7eade836]
+08:42:41.369 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Adding interceptor org.apache.cxf.interceptor.MessageSenderInterceptor@7a1226f8 to phase prepare-send
+08:42:41.369 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Adding interceptor org.apache.cxf.interceptor.LoggingOutInterceptor@49d236b3 to phase pre-stream
+08:42:41.369 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Adding interceptor org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor@7eade836 to phase marshal
+08:42:41.369 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Chain org.apache.cxf.phase.PhaseInterceptorChain@ec1fff8 was created. Current flow:
+  prepare-send [MessageSenderInterceptor]
+  pre-stream [LoggingOutInterceptor]
+  marshal [JAXRSOutInterceptor]
+
+08:42:41.369 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Invoking handleMessage on interceptor org.apache.cxf.interceptor.MessageSenderInterceptor@7a1226f8
+08:42:41.369 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Adding interceptor org.apache.cxf.interceptor.MessageSenderInterceptor$MessageSenderEndingInterceptor@658f2d3e to phase prepare-send-ending
+08:42:41.370 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Chain org.apache.cxf.phase.PhaseInterceptorChain@ec1fff8 was modified. Current flow:
+  prepare-send [MessageSenderInterceptor]
+  pre-stream [LoggingOutInterceptor]
+  marshal [JAXRSOutInterceptor]
+  prepare-send-ending [MessageSenderEndingInterceptor]
+
+08:42:41.370 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Invoking handleMessage on interceptor org.apache.cxf.interceptor.LoggingOutInterceptor@49d236b3
+08:42:41.370 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Invoking handleMessage on interceptor org.apache.cxf.jaxrs.interceptor.JAXRSOutInterceptor@7eade836
+08:42:41.385 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Invoking handleMessage on interceptor org.apache.cxf.interceptor.MessageSenderInterceptor$MessageSenderEndingInterceptor@658f2d3e
+08:42:41.386 [qtp195381554-20 - /portfolio/loadAll] INFO  o.a.c.i.LoggingOutInterceptor - Outbound Message
+---------------------------
+ID: 30
+Response-Code: 404
+Content-Type: 
+Headers: {Date=[Wed, 04 Jul 2018 05:42:41 GMT], Content-Length=[0]}
+--------------------------------------
+08:42:41.390 [qtp195381554-20 - /portfolio/loadAll] DEBUG o.a.c.t.h.JettyHTTPDestination - Finished servicing http request on thread: Thread[qtp195381554-20 - /portfolio/loadAll,5,main]
+08:42:41.390 [qtp195381554-20 - /portfolio/loadAll] DEBUG org.eclipse.jetty.server.Server - RESPONSE /portfolio/loadAll  404 handled=true
+08:42:41.391 [qtp195381554-20] DEBUG o.e.jetty.server.AsyncHttpConnection - Enabled read interest SCEP@55e94d5e{l(/127.0.0.1:50722)&lt;-&gt;r(/127.0.0.1:9015),s=1,open=true,ishut=false,oshut=false,rb=false,wb=false,w=true,i=1r}-{AsyncHttpConnection@1bf2372e,g=HttpGenerator{s=4,h=0,b=-1,c=-1},p=HttpParser{s=0,l=10,c=0},r=2}
+08:42:41.391 [qtp195381554-20] DEBUG org.eclipse.jetty.http.HttpParser - filled 0/0
+08:42:41.391 [main] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Adding interceptor org.apache.cxf.jaxrs.client.WebClient$ClientAsyncResponseInterceptor@1be2019a to phase unmarshal
+08:42:41.392 [main] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Adding interceptor org.apache.cxf.jaxrs.client.spec.ClientResponseFilterInterceptor@3148f668 to phase pre-protocol-frontend
+08:42:41.392 [main] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Chain org.apache.cxf.phase.PhaseInterceptorChain@6e005dc9 was created. Current flow:
+  pre-protocol-frontend [ClientResponseFilterInterceptor]
+  unmarshal [ClientAsyncResponseInterceptor]
+
+08:42:41.392 [main] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Invoking handleMessage on interceptor org.apache.cxf.jaxrs.client.spec.ClientResponseFilterInterceptor@3148f668
+08:42:41.392 [main] DEBUG o.a.cxf.phase.PhaseInterceptorChain - Invoking handleMessage on interceptor org.apache.cxf.jaxrs.client.WebClient$ClientAsyncResponseInterceptor@1be2019a
+08:42:41.392 [main] DEBUG org.apache.cxf.endpoint.ServerImpl - Server is stopping.
+08:42:41.392 [main] DEBUG o.a.c.t.h.JettyHTTPDestination - unregistering incoming observer: org.apache.cxf.transport.ChainInitiationObserver@2d6c53fc
+08:42:41.393 [main] DEBUG o.a.c.t.h.JettyHTTPDestination - Deactivating receipt of incoming messages
+08:42:41.393 [main] DEBUG o.e.jetty.util.component.Container - Container org.eclipse.jetty.server.handler.ContextHandlerCollection@2898ac89 - o.e.j.s.h.ContextHandler{,null} as handler
+08:42:41.393 [main] DEBUG o.e.j.u.component.AbstractLifeCycle - stopping o.e.j.s.h.ContextHandler{,null}
+08:42:41.393 [main] DEBUG o.e.j.u.component.AbstractLifeCycle - stopping org.apache.cxf.transport.http_jetty.JettyHTTPHandler@25f4878b
+08:42:41.393 [main] DEBUG o.e.j.server.handler.AbstractHandler - stopping org.apache.cxf.transport.http_jetty.JettyHTTPHandler@25f4878b
+08:42:41.393 [main] DEBUG o.e.j.u.component.AbstractLifeCycle - STOPPED org.apache.cxf.transport.http_jetty.JettyHTTPHandler@25f4878b
+08:42:41.393 [main] DEBUG o.e.j.server.handler.AbstractHandler - stopping o.e.j.s.h.ContextHandler{,null}
+08:42:41.393 [main] INFO  o.e.j.server.handler.ContextHandler - stopped o.e.j.s.h.ContextHandler{,null}
+08:42:41.393 [main] DEBUG o.e.j.u.component.AbstractLifeCycle - STOPPED o.e.j.s.h.ContextHandler{,null}
+08:42:41.393 [main] DEBUG o.e.jetty.util.component.Container - Container o.e.j.s.h.ContextHandler{,null} - org.apache.cxf.transport.http_jetty.JettyHTTPHandler@25f4878b as handler
+08:42:41.393 [main] DEBUG org.apache.cxf.endpoint.ServerImpl - unregister the server to serverRegistry 
+</system-out>
+  </testcase>
+  <testcase classname="com.ers.internship.rest.portfolio.PortfolioRestServiceTest" name="createTest" time="0.06"/>
+  <testcase classname="com.ers.internship.rest.portfolio.PortfolioRestServiceTest" name="updateTest" time="0.03"/>
+  <testcase classname="com.ers.internship.rest.portfolio.PortfolioRestServiceTest" name="loadByIdTest" time="0.04"/>
+  <testcase classname="com.ers.internship.rest.portfolio.PortfolioRestServiceTest" name="deleteByIdTest" time="0.05"/>
+</testsuite>

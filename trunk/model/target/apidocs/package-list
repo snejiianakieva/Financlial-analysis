@@ -1,0 +1,12 @@
+com.ers.internship.aggregation
+com.ers.internship.calculation
+com.ers.internship.calculation.instrument
+com.ers.internship.calculation.portfolioitem
+com.ers.internship.enums
+com.ers.internship.historization
+com.ers.internship.identificators
+com.ers.internship.instruments
+com.ers.internship.market
+com.ers.internship.portfolio
+com.ers.internship.position
+com.ers.internship.transaction

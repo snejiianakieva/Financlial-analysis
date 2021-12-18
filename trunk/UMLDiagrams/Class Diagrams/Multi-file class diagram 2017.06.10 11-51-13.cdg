@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Interface name="CrudDao" package="com.ers.internship.dao" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Methods>
+        <Method name="save" returnType="void" visibility="package">
+          <Argument type="E" name="object"/>
+        </Method>
+        <Method name="delete" returnType="void" visibility="package">
+          <Argument type="IdType" name="id"/>
+        </Method>
+        <Method name="loadById" returnType="E" visibility="package">
+          <Argument type="IdType" name="id"/>
+          <Argument type="Calendar" name="date"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="SearchingDao" package="com.ers.internship.dao" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Methods>
+        <Method name="searchByName" returnType="List&lt;E&gt;" visibility="package">
+          <Argument type="String" name="name"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="TransactionDao" package="com.ers.internship.dao" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Methods>
+        <Method name="loadPortfolioTransactions" returnType="List&lt;Transaction&gt;" visibility="package">
+          <Argument type="String" name="portfolioId"/>
+          <Argument type="Calendar" name="date"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="com.ers.internship.dao.TransactionDao" target="com.ers.internship.dao.SearchingDao"/>
+    <IsRelation name="is" source="com.ers.internship.dao.SearchingDao" target="com.ers.internship.dao.CrudDao"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

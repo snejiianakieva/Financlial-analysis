@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="AbstractSearchingService" package="com.ers.internship.services.crud.searching" visibility="public" isAbstract="true" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="PersistentStore" name="persistentStore"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDao" returnType="SearchingDao&lt;IdType, E&gt;" visibility="protected" isAbstract="true"/>
+        <Method name="searchByName" returnType="LoadResults&lt;E&gt;" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="InstrumentService" package="com.ers.internship.services.crud.searching" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="logger" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="PersistentStore" name="persistentStore"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDao" returnType="SearchingDao&lt;String, Instrument&gt;" visibility="protected"/>
+        <Method name="validateItem" returnType="List&lt;String&gt;" visibility="protected">
+          <Argument type="Instrument" name="instrument"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PortfolioService" package="com.ers.internship.services.crud.searching" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="logger" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="PersistentStore" name="persistentStore"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDao" returnType="SearchingDao&lt;String, Portfolio&gt;" visibility="protected"/>
+        <Method name="validateItem" returnType="List&lt;String&gt;" visibility="protected">
+          <Argument type="Portfolio" name="portfolio"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PositionService" package="com.ers.internship.services.crud.searching" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="logger" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="PersistentStore" name="persistentStore"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDao" returnType="SearchingDao&lt;String, Position&gt;" visibility="protected"/>
+        <Method name="validateItem" returnType="List&lt;String&gt;" visibility="protected">
+          <Argument type="Position" name="position"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TransactionService" package="com.ers.internship.services.crud.searching" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="logger" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="PersistentStore" name="persistentStore"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDao" returnType="SearchingDao&lt;String, Transaction&gt;" visibility="protected"/>
+        <Method name="validateItem" returnType="List&lt;String&gt;" visibility="protected">
+          <Argument type="Transaction" name="transaction"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AbstractCrudService" package="com.ers.internship.services.crud" visibility="public" isAbstract="true" xPosition="1520.0" yPosition="20.0">
+      <Fields>
+        <Field name="persistentStore" type="PersistentStore" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="PersistentStore" name="persistentStore"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPersistentStore" returnType="PersistentStore" visibility="public"/>
+        <Method name="setPersistentStore" returnType="void" visibility="public">
+          <Argument type="PersistentStore" name="persistentStore"/>
+        </Method>
+        <Method name="delete" returnType="List&lt;String&gt;" visibility="public">
+          <Argument type="IdType" name="id"/>
+        </Method>
+        <Method name="update" returnType="List&lt;String&gt;" visibility="public">
+          <Argument type="T" name="item"/>
+        </Method>
+        <Method name="create" returnType="List&lt;String&gt;" visibility="public">
+          <Argument type="T" name="item"/>
+        </Method>
+        <Method name="loadById" returnType="LoadResult&lt;T&gt;" visibility="public">
+          <Argument type="IdType" name="id"/>
+          <Argument type="Calendar" name="date"/>
+        </Method>
+        <Method name="getDao" returnType="CrudDao&lt;IdType, T&gt;" visibility="protected" isAbstract="true"/>
+        <Method name="validateNumberPositive" returnType="boolean" visibility="protected">
+          <Argument type="List&lt;String&gt;" name="errors"/>
+          <Argument type="double" name="num"/>
+          <Argument type="String" name="message"/>
+        </Method>
+        <Method name="validateStringNotEmpty" returnType="boolean" visibility="protected">
+          <Argument type="List&lt;String&gt;" name="errors"/>
+          <Argument type="String" name="str"/>
+          <Argument type="String" name="message"/>
+        </Method>
+        <Method name="validateNotNull" returnType="boolean" visibility="protected">
+          <Argument type="List&lt;String&gt;" name="errors"/>
+          <Argument type="Object" name="o"/>
+          <Argument type="String" name="message"/>
+        </Method>
+        <Method name="validateItem" returnType="List&lt;String&gt;" visibility="protected" isAbstract="true">
+          <Argument type="T" name="item"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="com.ers.internship.services.crud.searching.TransactionService" target="com.ers.internship.services.crud.searching.AbstractSearchingService"/>
+    <IsRelation name="is" source="com.ers.internship.services.crud.searching.InstrumentService" target="com.ers.internship.services.crud.searching.AbstractSearchingService"/>
+    <IsRelation name="is" source="com.ers.internship.services.crud.searching.PortfolioService" target="com.ers.internship.services.crud.searching.AbstractSearchingService"/>
+    <IsRelation name="is" source="com.ers.internship.services.crud.searching.PositionService" target="com.ers.internship.services.crud.searching.AbstractSearchingService"/>
+    <IsRelation name="is" source="com.ers.internship.services.crud.searching.AbstractSearchingService" target="com.ers.internship.services.crud.AbstractCrudService"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

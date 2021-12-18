@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="FxQuote" package="com.ers.internship.market" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="LOG" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="value" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="FxQuoteId" name="id"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getBaseCurrency" returnType="String" visibility="public"/>
+        <Method name="setBaseCurrency" returnType="void" visibility="public">
+          <Argument type="String" name="fromCurrency"/>
+        </Method>
+        <Method name="getTargetCurrency" returnType="String" visibility="public"/>
+        <Method name="setTargetCurrency" returnType="void" visibility="public">
+          <Argument type="String" name="toCurrency"/>
+        </Method>
+        <Method name="getDate" returnType="Calendar" visibility="public"/>
+        <Method name="setDate" returnType="void" visibility="public">
+          <Argument type="Calendar" name="atDate"/>
+        </Method>
+        <Method name="getValue" returnType="double" visibility="public"/>
+        <Method name="setValue" returnType="void" visibility="public">
+          <Argument type="double" name="value"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="HistorizedItem" package="com.ers.internship.historization" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="logger" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="id" type="IdType" visibility="private"/>
+        <Field name="validFrom" type="Timestamp" visibility="private"/>
+        <Field name="validTo" type="Timestamp" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="IdType" name="id"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getID" returnType="IdType" visibility="public"/>
+        <Method name="setID" returnType="void" visibility="public">
+          <Argument type="IdType" name="id"/>
+        </Method>
+        <Method name="getValidFrom" returnType="Timestamp" visibility="public"/>
+        <Method name="setValidFrom" returnType="void" visibility="public">
+          <Argument type="Timestamp" name="validFrom"/>
+        </Method>
+        <Method name="getValidTo" returnType="Timestamp" visibility="public"/>
+        <Method name="setValidTo" returnType="void" visibility="public">
+          <Argument type="Timestamp" name="validTo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="Market" package="com.ers.internship.market" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Methods>
+        <Method name="getYieldCurve" returnType="YieldCurve" visibility="public">
+          <Argument type="String" name="currency"/>
+          <Argument type="Calendar" name="date"/>
+        </Method>
+        <Method name="getFX" returnType="double" visibility="public">
+          <Argument type="String" name="baseCurrency"/>
+          <Argument type="String" name="targetCurrency"/>
+          <Argument type="Calendar" name="date"/>
+        </Method>
+        <Method name="getPrice" returnType="InstrumentPriceQuote" visibility="public">
+          <Argument type="String" name="instrumentId"/>
+          <Argument type="Calendar" name="date"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Class name="InstrumentPriceQuote" package="com.ers.internship.market" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="logger" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="instrumentPrice" type="double" visibility="private"/>
+        <Field name="currency" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="InstrumentPriceQuoteId" name="id"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getInstrumentPrice" returnType="double" visibility="public"/>
+        <Method name="setInstrumentPrice" returnType="void" visibility="public">
+          <Argument type="double" name="instrumentPrice"/>
+        </Method>
+        <Method name="getCurrency" returnType="String" visibility="public"/>
+        <Method name="setCurrency" returnType="void" visibility="public">
+          <Argument type="String" name="currency"/>
+        </Method>
+        <Method name="getInstrumentId" returnType="String" visibility="public"/>
+        <Method name="setInstrumentId" returnType="void" visibility="public">
+          <Argument type="String" name="instrumentId"/>
+        </Method>
+        <Method name="getDate" returnType="Calendar" visibility="public"/>
+        <Method name="setDate" returnType="void" visibility="public">
+          <Argument type="Calendar" name="atDate"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="YieldCurve" package="com.ers.internship.market" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="logger" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="zeroYieldThreeMonths" type="double" visibility="private"/>
+        <Field name="zeroYieldSixMonths" type="double" visibility="private"/>
+        <Field name="zeroYieldOneYear" type="double" visibility="private"/>
+        <Field name="zeroYieldTwoYears" type="double" visibility="private"/>
+        <Field name="zeroYieldFiveYears" type="double" visibility="private"/>
+        <Field name="zeroYieldTenYears" type="double" visibility="private"/>
+        <Field name="zeroYieldThirtyYears" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="YieldCurveId" name="id"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCurrency" returnType="String" visibility="public"/>
+        <Method name="setCurrency" returnType="void" visibility="public">
+          <Argument type="String" name="currency"/>
+        </Method>
+        <Method name="getDate" returnType="Calendar" visibility="public"/>
+        <Method name="setDate" returnType="void" visibility="public">
+          <Argument type="Calendar" name="atDate"/>
+        </Method>
+        <Method name="getZeroYieldThreeMonths" returnType="double" visibility="public"/>
+        <Method name="setZeroYieldThreeMonths" returnType="void" visibility="public">
+          <Argument type="double" name="zeroYieldThreeMonths"/>
+        </Method>
+        <Method name="getZeroYieldSixMonths" returnType="double" visibility="public"/>
+        <Method name="setZeroYieldSixMonths" returnType="void" visibility="public">
+          <Argument type="double" name="zeroYieldSixMonths"/>
+        </Method>
+        <Method name="getZeroYieldOneYear" returnType="double" visibility="public"/>
+        <Method name="setZeroYieldOneYear" returnType="void" visibility="public">
+          <Argument type="double" name="zeroYieldOneYear"/>
+        </Method>
+        <Method name="getZeroYieldTwoYears" returnType="double" visibility="public"/>
+        <Method name="setZeroYieldTwoYears" returnType="void" visibility="public">
+          <Argument type="double" name="zeroYieldTwoYears"/>
+        </Method>
+        <Method name="getZeroYieldFiveYears" returnType="double" visibility="public"/>
+        <Method name="setZeroYieldFiveYears" returnType="void" visibility="public">
+          <Argument type="double" name="zeroYieldFiveYears"/>
+        </Method>
+        <Method name="getZeroYieldTenYears" returnType="double" visibility="public"/>
+        <Method name="setZeroYieldTenYears" returnType="void" visibility="public">
+          <Argument type="double" name="zeroYieldTenYears"/>
+        </Method>
+        <Method name="getZeroYieldThirtyYears" returnType="double" visibility="public"/>
+        <Method name="setZeroYieldThirtyYears" returnType="void" visibility="public">
+          <Argument type="double" name="zeroYieldThirtyYears"/>
+        </Method>
+        <Method name="calculateInterestRate" returnType="double" visibility="private">
+          <Argument type="double" name="distance"/>
+        </Method>
+        <Method name="calculateDiscountFactor" returnType="double" visibility="public">
+          <Argument type="Calendar" name="date"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Portfolio" package="com.ers.internship.portfolio" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields>
+        <Field name="logger" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="currency" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="id"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getCurrency" returnType="String" visibility="public"/>
+        <Method name="setCurrency" returnType="void" visibility="public">
+          <Argument type="String" name="currency"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Position" package="com.ers.internship.position" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="logger" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="longSide" type="String" visibility="private"/>
+        <Field name="shortSide" type="String" visibility="private"/>
+        <Field name="portfolioId" type="String" visibility="private"/>
+        <Field name="instrument" type="Instrument" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="id"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getLongSide" returnType="String" visibility="public"/>
+        <Method name="setLongSide" returnType="void" visibility="public">
+          <Argument type="String" name="longSide"/>
+        </Method>
+        <Method name="getShortSide" returnType="String" visibility="public"/>
+        <Method name="setShortSide" returnType="void" visibility="public">
+          <Argument type="String" name="shortSide"/>
+        </Method>
+        <Method name="getPortfolioId" returnType="String" visibility="public"/>
+        <Method name="setPortfolioId" returnType="void" visibility="public">
+          <Argument type="String" name="portfolioId"/>
+        </Method>
+        <Method name="getInstrument" returnType="Instrument" visibility="public"/>
+        <Method name="setInstrument" returnType="void" visibility="public">
+          <Argument type="Instrument" name="instrument"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Transaction" package="com.ers.internship.transaction" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields>
+        <Field name="logger" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="volume" type="double" visibility="private"/>
+        <Field name="paidAmount" type="double" visibility="private"/>
+        <Field name="currency" type="String" visibility="private"/>
+        <Field name="sender" type="String" visibility="private"/>
+        <Field name="receiver" type="String" visibility="private"/>
+        <Field name="positionId" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="id"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getVolume" returnType="double" visibility="public"/>
+        <Method name="setVolume" returnType="void" visibility="public">
+          <Argument type="double" name="volume"/>
+        </Method>
+        <Method name="getPaidAmount" returnType="double" visibility="public"/>
+        <Method name="setPaidAmount" returnType="void" visibility="public">
+          <Argument type="double" name="paidAmount"/>
+        </Method>
+        <Method name="getCurrency" returnType="String" visibility="public"/>
+        <Method name="setCurrency" returnType="void" visibility="public">
+          <Argument type="String" name="currency"/>
+        </Method>
+        <Method name="getSender" returnType="String" visibility="public"/>
+        <Method name="setSender" returnType="void" visibility="public">
+          <Argument type="String" name="sender"/>
+        </Method>
+        <Method name="getReceiver" returnType="String" visibility="public"/>
+        <Method name="setReceiver" returnType="void" visibility="public">
+          <Argument type="String" name="receiver"/>
+        </Method>
+        <Method name="getPositionId" returnType="String" visibility="public"/>
+        <Method name="setPositionId" returnType="void" visibility="public">
+          <Argument type="String" name="positionId"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CreditRegular" package="com.ers.internship.instruments" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields>
+        <Field name="logger" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="tenorMonths" type="int" visibility="private"/>
+        <Field name="interestRate" type="double" visibility="private"/>
+        <Field name="frequency" type="Frequency" visibility="private"/>
+        <Field name="issue" type="Calendar" visibility="private"/>
+        <Field name="maturity" type="Calendar" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="id"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTenorMonths" returnType="int" visibility="public"/>
+        <Method name="setTenorMonths" returnType="void" visibility="public">
+          <Argument type="int" name="tenorMonths"/>
+        </Method>
+        <Method name="getInterestRate" returnType="double" visibility="public"/>
+        <Method name="setInterestRate" returnType="void" visibility="public">
+          <Argument type="double" name="interestRate"/>
+        </Method>
+        <Method name="getFrequency" returnType="Frequency" visibility="public"/>
+        <Method name="setFrequency" returnType="void" visibility="public">
+          <Argument type="Frequency" name="frequency"/>
+        </Method>
+        <Method name="getIssue" returnType="Calendar" visibility="public"/>
+        <Method name="setIssue" returnType="void" visibility="public">
+          <Argument type="Calendar" name="issue"/>
+        </Method>
+        <Method name="getMaturity" returnType="Calendar" visibility="public"/>
+        <Method name="setMaturity" returnType="void" visibility="public">
+          <Argument type="Calendar" name="maturity"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Instrument" package="com.ers.internship.instruments" visibility="public" isAbstract="true" xPosition="320.0" yPosition="420.0">
+      <Fields>
+        <Field name="isin" type="String" visibility="private"/>
+        <Field name="currency" type="String" visibility="private"/>
+        <Field name="market" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="id"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getIsin" returnType="String" visibility="public"/>
+        <Method name="setIsin" returnType="void" visibility="public">
+          <Argument type="String" name="isin"/>
+        </Method>
+        <Method name="getCurrency" returnType="String" visibility="public"/>
+        <Method name="setCurrency" returnType="void" visibility="public">
+          <Argument type="String" name="currency"/>
+        </Method>
+        <Method name="getMarket" returnType="String" visibility="public"/>
+        <Method name="setMarket" returnType="void" visibility="public">
+          <Argument type="String" name="market"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Share" package="com.ers.internship.instruments" visibility="public" xPosition="620.0" yPosition="420.0">
+      <Fields>
+        <Field name="logger" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="id"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="TimeDeposit" package="com.ers.internship.instruments" visibility="public" xPosition="920.0" yPosition="420.0">
+      <Fields>
+        <Field name="LOG" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="tenorMonths" type="int" visibility="private"/>
+        <Field name="interestRate" type="double" visibility="private"/>
+        <Field name="issue" type="Calendar" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="id"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTenorMonths" returnType="int" visibility="public"/>
+        <Method name="setTenorMonths" returnType="void" visibility="public">
+          <Argument type="int" name="tenorMonths"/>
+        </Method>
+        <Method name="getInterestRate" returnType="double" visibility="public"/>
+        <Method name="setInterestRate" returnType="void" visibility="public">
+          <Argument type="double" name="interestRate"/>
+        </Method>
+        <Method name="getIssue" returnType="Calendar" visibility="public"/>
+        <Method name="setIssue" returnType="void" visibility="public">
+          <Argument type="Calendar" name="issue"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="com.ers.internship.market.FxQuote" target="com.ers.internship.historization.HistorizedItem"/>
+    <IsRelation name="is" source="com.ers.internship.transaction.Transaction" target="com.ers.internship.historization.HistorizedItem"/>
+    <IsRelation name="is" source="com.ers.internship.instruments.Instrument" target="com.ers.internship.historization.HistorizedItem"/>
+    <IsRelation name="is" source="com.ers.internship.market.InstrumentPriceQuote" target="com.ers.internship.historization.HistorizedItem"/>
+    <IsRelation name="is" source="com.ers.internship.position.Position" target="com.ers.internship.historization.HistorizedItem"/>
+    <IsRelation name="is" source="com.ers.internship.portfolio.Portfolio" target="com.ers.internship.historization.HistorizedItem"/>
+    <IsRelation name="is" source="com.ers.internship.market.YieldCurve" target="com.ers.internship.historization.HistorizedItem"/>
+    <IsRelation name="is" source="com.ers.internship.instruments.Share" target="com.ers.internship.instruments.Instrument"/>
+    <UseRelation source="com.ers.internship.market.Market" target="com.ers.internship.instruments.Instrument" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="com.ers.internship.instruments.CreditRegular" target="com.ers.internship.instruments.Instrument"/>
+    <UseRelation source="com.ers.internship.market.Market" target="com.ers.internship.market.YieldCurve" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="instrument" source="com.ers.internship.position.Position" target="com.ers.internship.instruments.Instrument" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.ers.internship.position.Position" target="com.ers.internship.instruments.Instrument" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="com.ers.internship.instruments.TimeDeposit" target="com.ers.internship.instruments.Instrument"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

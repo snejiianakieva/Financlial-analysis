@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="HistorizedItem">
+  <ClassDiagramComponents>
+    <Class name="HistorizedItem" package="com.ers.internship.historization" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="logger" type="Logger" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="id" type="IdType" visibility="private"/>
+        <Field name="validFrom" type="Timestamp" visibility="private"/>
+        <Field name="validTo" type="Timestamp" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="IdType" name="id"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getID" returnType="IdType" visibility="public"/>
+        <Method name="setID" returnType="void" visibility="public">
+          <Argument type="IdType" name="id"/>
+        </Method>
+        <Method name="getValidFrom" returnType="Timestamp" visibility="public"/>
+        <Method name="setValidFrom" returnType="void" visibility="public">
+          <Argument type="Timestamp" name="validFrom"/>
+        </Method>
+        <Method name="getValidTo" returnType="Timestamp" visibility="public"/>
+        <Method name="setValidTo" returnType="void" visibility="public">
+          <Argument type="Timestamp" name="validTo"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>
